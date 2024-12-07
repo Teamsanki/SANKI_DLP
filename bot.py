@@ -48,5 +48,5 @@ async def main() -> None:
     await application.run_polling()
 
 if __name__ == '__main__':
-    import asyncio
-    asyncio.run(main())
+    # Directly call the polling method without asyncio.run
+    main()
