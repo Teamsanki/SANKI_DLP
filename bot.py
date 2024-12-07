@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 from telegram import Update
 from telegram.ext import Application, CommandHandler, CallbackContext
 from telegram import InputMediaPhoto
+import asyncio  # Import asyncio to run the main coroutine
 
 # Load environment variables from .env file
 load_dotenv()
@@ -48,5 +49,5 @@ async def main() -> None:
     await application.run_polling()
 
 if __name__ == '__main__':
-    # Directly call the polling method without asyncio.run
-    main()
+    # Correctly use asyncio.run() to start the bot
+    asyncio.run(main())
